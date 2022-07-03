@@ -1,0 +1,19 @@
+Procedure LoginMenu()
+    Renderwindow()
+    Run = True
+    While Run
+        If window.close == True
+            Run = False
+        ElseIf window.login == True
+            User, Pass = getData()
+            result = verify(User,Pass)
+            If result != False
+                Menu(result)
+                Run = False
+            Endif
+        Endif
+    Endwhile
+    window.destroy()
+Endprocedure
+        
+

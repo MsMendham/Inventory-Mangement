@@ -1,0 +1,17 @@
+Function verify(uName,pWord)
+    hashed = hash(pWord)
+    databasecheck = inDb(uName)
+    databasematch = matchDb(uName,pWord)
+    
+    if databasecheck == False
+        window.alerttext = "no user exists"
+        return False
+    
+    if databasematch == False
+        window.alerttext = "wrong password"
+        return False
+    
+    ID = getDb(uName)
+    return ID
+endfunction
+

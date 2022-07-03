@@ -1,0 +1,7 @@
+Function getData()
+    userName = string(window.userIn.get())
+    password = string(window.passIn.get())
+    
+    return userName, password
+endfunction
+
