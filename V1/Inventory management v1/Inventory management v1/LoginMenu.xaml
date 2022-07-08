@@ -4,9 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Inventory_management_v1"
-        mc:Ignorable="d" FontSize="18"
-        Title="LoginMenu" Height="250" Width="425" 
-        ResizeMode="CanMinimize">
+        mc:Ignorable="d" 
+        FontSize="18"
+        Title="LoginMenu" 
+        Height="250" 
+        Width="425" 
+        ResizeMode="CanMinimize"
+        Background="#a4dbc4"
+        >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
@@ -53,6 +58,7 @@
             Width="150"
             Margin="5,0,0,5" 
             HorizontalAlignment="Left"
+            BorderBrush="Black"
             />
         
         <TextBlock 
@@ -69,6 +75,7 @@
             Width="150"
             Margin="5,5,0,0" 
             HorizontalAlignment="Left"
+            BorderBrush="Black"
             />
         
         <Button x:Name="Submit" 
@@ -77,6 +84,7 @@
                 Grid.Row="5" 
                 Margin="82,5,20,5" 
                 Click="LoginButton" 
+                Background="White"
                 />
 
         <TextBlock x:Name="Alertbox" 
