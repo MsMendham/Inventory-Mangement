@@ -91,7 +91,10 @@
                    Text=""
                    Grid.Column="3"
                    Grid.Row="6"
-                   Grid.ColumnSpan="4"
+                   Grid.ColumnSpan="3"
+                   FontSize="14"
+                   Foreground="Red"
+                   HorizontalAlignment="Center"
                    />
 
     </Grid>
