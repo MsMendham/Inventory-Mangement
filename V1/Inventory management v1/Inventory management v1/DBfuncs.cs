@@ -43,6 +43,20 @@ namespace Inventory_management_v1
             // this executes the select id using username and password stored proc
             return result;
         }
+        public static string getUsername(int ID)
+        {
+            string result = queryDB($"EXEC getUsername @ID = {ID};");
+            //creates result which is the return value form queryDB from the sql command given
+            // this executes the getusername stored proc
+            return result;
+        }
+        public static int getPerms(int ID)
+        {
+            int result =  Convert.ToInt32(queryDB($"EXEC spGetPerms @ID = {ID};"));
+            //creates result which is the return value form queryDB from the sql command given and converts it to an int
+            // this executes the getperms stored proc
+            return result;
+        }
 
     }
 }

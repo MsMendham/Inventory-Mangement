@@ -5,16 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Inventory_management_v1"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800">
+        Title="Main Menu" 
+        Height="1080" 
+        Width="1920"
+        WindowState="Maximized"
+        WindowStyle="None"
+        Background="#a4dbc4"
+        >
+    <Window.Resources>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
@@ -25,21 +31,78 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
         <TextBlock 
             Grid.Row="2"
-            Grid.Column="2"
+            Grid.Column="3"
             Text="MainMenu"
-            FontSize="50"
+            TextAlignment="Center"
+            FontSize="100"
+            Margin="0,10,0,10"
             />
         <TextBlock 
             x:Name="User"
-            Grid.Row="3"
-            Grid.Column="2"
-            Text=""
-            FontSize="30"
+            Grid.Row="2"
+            Grid.Column="1"
+            Text="Username"
+            FontSize="50"
+            Margin="0,0,30,0"
+            TextAlignment="Right"
             />
+        <Button 
+            Style="{DynamicResource FancyButton}"
+            x:Name="Invent"
+            Content="Inventory"
+            Grid.Column="3"
+            Grid.Row="3"
+            FontSize="140"
+            Margin="0,10,0,10" Click="InventButton"
+            />
+        <Button 
+            Style="{DynamicResource FancyButton}"
+            x:Name="Warehse"
+            Content="Warehouse"
+            Grid.Column="3"
+            Grid.Row="4"
+            FontSize="140"
+            Margin="0,10,0,10" Click="WarehouseButton"
+            />
+        <Button 
+            Style="{DynamicResource FancyButton}" 
+            x:Name="Admin"
+            Content="Admin"
+            Grid.Column="3"
+            Grid.Row="5"
+            FontSize="140"
+            Margin="0,10,0,10"
+            Visibility="Visible" Click="AdminButton"
+            />
+        <Button
+            x:Name="Logout"
+            Content="Logout"
+            Grid.Column="5"
+            Grid.Row="6"
+            FontSize="50"
+            Margin="10,5,20,5"
+            Style="{DynamicResource White Button}"
+            BorderThickness="5" Click="LogoutButton"
+            />
+        <Button
+            x:Name="exit"
+            Content="Close"
+            Grid.Column="5"
+            Grid.Row="7"
+            FontSize="50"
+            Margin="10,5,20,5"
+            Style="{DynamicResource White Button}"
+            BorderThickness="5" 
+            Click="CloseButton"
+            />
+
     </Grid>
 </Window>

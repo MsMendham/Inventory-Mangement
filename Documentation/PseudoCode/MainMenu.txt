@@ -1,0 +1,29 @@
+procedure MainMenu(UserID)
+    userperms = GetUserperms(UserID)
+    username = getusername(UserID)
+    RenderWindow()
+    If userperms != 1
+        window.Adminbutton.hide()
+    run = True
+    While run 
+        If window.close == True
+            run = False
+        Elseif window.logout == True
+            LoginMenu()
+            window.destroy()
+        Elseif window.inventory == True
+            inventoryMenu()
+            window.hide()
+        Elseif window.warehouse == True
+            warehouseMenu()
+            window.hide()
+        Elseif window.admin == True
+            if userperms == 1
+                Adminmenu()
+                window.hide()
+            Endif
+        Endif
+    Endwhile
+Endprocedure
+    
+            

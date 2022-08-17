@@ -84,7 +84,7 @@
                 Grid.Row="5" 
                 Margin="82,5,20,5" 
                 Click="LoginButton" 
-                Background="White"
+                Style="{DynamicResource White Button}"
                 />
 
         <TextBlock x:Name="Alertbox" 
