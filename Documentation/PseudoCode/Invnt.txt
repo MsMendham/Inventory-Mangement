@@ -1,0 +1,23 @@
+Procedure InventoryMenu()
+    items = GetItems()
+    Batches = GetBatches()
+    RenderWindow()
+    Window.List = Batches
+    While True 
+        if Window.search == True
+            data = Window.searchEnt
+            result = search(data,items)
+            result = result+search(data,Batches)
+            result = sort(result,alpha)
+            Window.List = result
+        ElseIf Window.Sort == True
+            type = Window.sorttype
+            result = sort(batches,type)
+            Window.List = result
+        Elseif Window.back ==True
+            MainMenu.Show()
+            self.destroy()
+            break
+        
+        
+    
