@@ -1,0 +1,9 @@
+Function GetItems()
+    itemsArr = sql.getall(items)
+    items = []
+    for i in itemsArr
+        obj = new item(i[0],i[1],i[2])
+        items.append(obj)
+    Endfor
+    return items
+endfunction

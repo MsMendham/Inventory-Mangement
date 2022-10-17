@@ -1,0 +1,9 @@
+Function GetBatches()
+    BatchesArr = sql.getall(Batches)
+    batches = []
+    for i in BatchesArr
+        obj = new batch(i[0],i[1],i[2],i[3])
+        batches.append(obj)
+    Endfor
+    return batches
+endfunction

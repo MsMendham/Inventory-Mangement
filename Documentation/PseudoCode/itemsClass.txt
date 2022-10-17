@@ -1,0 +1,27 @@
+class item()
+    
+    public procedure new(self,id,name,type)
+        self.id = id
+        self.name = name
+        self.type = type
+    endprocedure
+    
+    Function getName(self)
+        return self.name
+    
+    Function getId(self)
+        return self.id
+    
+    Function getType(self)
+        return self.type
+        
+    procedure setName(self,name)
+        self.name = name
+    
+    procedure setId(self,id)
+        self.id = id
+        
+    procedure setType(self,type)
+        self.type = type
+        
+endclass

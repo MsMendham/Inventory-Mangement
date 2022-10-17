@@ -1,0 +1,34 @@
+class batch()
+    
+    public procedure new(self,No,expire,Quant,item)
+        self.BatchNumber = No
+        self.ExpiryDate = expire
+        self.Quantity = Quant
+	self.item = item
+    endprocedure
+    
+    Function getNo(self)
+        return self.BatchNumber
+    
+    Function getExpD(self)
+        return self.ExpiryDate
+    
+    Function getQuant(self)
+        return self.Quantity
+    
+    Function getItem(self)
+      	return self.item
+        
+    procedure setExpD(self,Exp)
+        self.ExpiryDate = Exp
+    
+    procedure setNo(self,No)
+        self.BatchNumber = No
+        
+    procedure setQuant(self,Quant)
+        self.Quantity = Quant
+    
+    procedure setItem(self,Item)
+	self.item = Item
+        
+endclass
