@@ -9,7 +9,7 @@ namespace Inventory_management_v1
 {
     class DBfuncs
     {
-        public static string queryDB(string query)
+        private static string queryDB(string query)
         {
             var cs = @"Server=.\SQLEXPRESS;Database=UserDB;Trusted_Connection=True;";
             // defines the connection string when setup this would need to be changed to fit the database

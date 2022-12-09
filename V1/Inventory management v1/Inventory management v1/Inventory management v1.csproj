@@ -66,6 +66,7 @@
       <DependentUpon>InventoryMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="Item.cs" />
+    <Compile Include="MainDbFuncs.cs" />
     <Compile Include="MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
     </Compile>
