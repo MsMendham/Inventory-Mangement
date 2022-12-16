@@ -16,21 +16,77 @@
             <ColumnDefinition Width="20"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="3*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
         <TextBlock
             Grid.Row="2"
-            Grid.Column="2"
+            Grid.Column="3"
             Text="Inventory"
             FontSize="100"
+            Grid.ColumnSpan="2"
+            TextAlignment="Center"
             />
+        <TextBlock
+            Name="Username"
+            Grid.Row="1"
+            Grid.Column="1"
+            Text="TestUsername"
+            FontSize="40"
+            Grid.ColumnSpan="2"
+            />
+        <Button
+            Name="Batches"
+            Grid.Column="3"
+            Grid.Row="4"
+            Width="500"
+            Height="100"
+            Content="Batches"
+            FontSize="60"
+            Style="{DynamicResource FancyButton}"
+            />
+        <Button
+            Name="Items"
+            Grid.Column="4"
+            Grid.Row="4"
+            Width="500"
+            Height="100"
+            Content="Items"
+            FontSize="60"
+            Style="{DynamicResource FancyButton}"
+            />
+        <ListBox
+            Grid.Row="5"
+            Grid.Column="3"
+            Grid.ColumnSpan="2"
+            Name="Box"
+            FontSize="40"
+            Height="450"
+            
+            />
+        <!--welp this list box needs to be finished and funcs added before other funtionality i thiunk-->
+
+
     </Grid>
 </Window>

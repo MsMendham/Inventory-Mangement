@@ -19,11 +19,14 @@ namespace Inventory_management_v1
     /// </summary>
     public partial class MainMenu : Window
     {
+        private string uname;
+        private int perms;
+        
         public MainMenu(int userID)
         {
             InitializeComponent();
-            string uname = DBfuncs.getUsername(userID); // gets usersname
-            int perms = DBfuncs.getPerms(userID); // gets permissions
+            uname = DBfuncs.getUsername(userID); // gets usersname
+            perms = DBfuncs.getPerms(userID); // gets permissions
             User.Text = uname; // changes user text block to the username
             if (perms != 1)// checks if not an admin
             {
@@ -64,7 +67,7 @@ namespace Inventory_management_v1
 
         private void InventButton(object sender, RoutedEventArgs e)
         {
-            InventoryMenu objinventorymenu = new InventoryMenu();
+            InventoryMenu objinventorymenu = new InventoryMenu(uname);
             objinventorymenu.Show();
             this.Hide();
             // creates a inventorymenu object shows it and hides the current menu

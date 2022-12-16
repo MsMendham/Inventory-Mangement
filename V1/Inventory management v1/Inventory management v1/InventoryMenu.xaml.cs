@@ -19,9 +19,10 @@ namespace Inventory_management_v1
     /// </summary>
     public partial class InventoryMenu : Window
     {
-        public InventoryMenu()
+        public InventoryMenu(string name)
         {
             InitializeComponent();
+            Username.Text = name;
         }
     }
 }

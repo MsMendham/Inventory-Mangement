@@ -46,16 +46,17 @@ namespace Inventory_management_v1
             }
             // executes the command and stores the result in output
             // if an error is thrown set output to null and gives the error code
+            con.Close();
 
             return output;
             // returns the output
         }
 
-        public static List<object> getItems()
+        public static List<Item> getItems()
         {
             SqlDataReader reader = QueryMainDB("EXEC sp_get @param1 = 1"); // querys the database for the items table
             
-            List<object> Items = new List<object>(); // creates a list that will contain objects
+            List<Item> Items = new List<Item>(); // creates a list that will contain objects
 
             // creates a loop that incremnts the record of the reader each loop and will stop after there are no records left
             // the loop then creates an object using the data it got from the database and adds it to the items list
@@ -65,13 +66,40 @@ namespace Inventory_management_v1
                 string name = reader.GetString(1);
                 string type = reader.GetString(2);
                 
-                object item = new Item(id, name, type);
+                Item item = new Item(id, name, type);
 
                 Items.Add(item);
+                
             }
+            reader.Close();
             return Items;// returns the list
         }
 
-        // test above func works future me  then document it:)) 
+        public static List<Batch> getBatch(List<Item> items)
+        {
+            SqlDataReader reader = QueryMainDB("EXEC sp_get @param1 = 0"); // querys the database for the batches table
+
+            List<Batch> Batches = new List<Batch>(); // creates a list that will contain objects
+
+            // creates a loop that incremnts the record of the reader each loop and will stop after there are no records left
+            // the loop then creates an object using the data it got from the database and adds it to the batches list
+            while (reader.Read())
+            {
+                int num = reader.GetInt32(0);
+                Item item = items[reader.GetInt32(1)-1];
+                DateTime Date = reader.GetDateTime(2);
+                int Quant = reader.GetInt32(3);
+
+                Batch batch = new Batch(item, num, Date,  Quant);
+
+                Batches.Add(batch);
+
+            }
+
+            reader.Close();
+            
+            return Batches;// returns the list
+        }
+
     }
 }

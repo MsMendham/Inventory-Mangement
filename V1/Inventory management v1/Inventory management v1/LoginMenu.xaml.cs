@@ -28,6 +28,7 @@ namespace Inventory_management_v1
         private void LoginButton(object sender, RoutedEventArgs e)
         {
             
+
             string uname = Username.Text;
             string pword = Password.Text;
             // get the data from the windowz

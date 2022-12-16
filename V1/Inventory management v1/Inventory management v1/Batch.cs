@@ -10,9 +10,9 @@ namespace Inventory_management_v1
     {
         private int BatchNo;
         private object Item;
-        private int expiryDate;
+        private DateTime expiryDate;
         private int Quantity;
-        public Batch(object item, int Number, int Date, int Quant) // constructor method
+        public Batch(object item, int Number, DateTime Date, int Quant) // constructor method
         {
             BatchNo = Number;
             Item = item;
@@ -28,7 +28,7 @@ namespace Inventory_management_v1
         {
             return Item;
         }
-        public int getDate()
+        public DateTime getDate()
         {
             return expiryDate;
 
@@ -42,7 +42,7 @@ namespace Inventory_management_v1
         {
             this.Item = item;
         }
-        public void setDate(int date)
+        public void setDate(DateTime date)
         {
             this.expiryDate= date;
         }
