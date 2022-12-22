@@ -46,7 +46,7 @@ namespace Inventory_management_v1
             }
             // executes the command and stores the result in output
             // if an error is thrown set output to null and gives the error code
-            con.Close();
+            
 
             return output;
             // returns the output
@@ -60,6 +60,7 @@ namespace Inventory_management_v1
 
             // creates a loop that incremnts the record of the reader each loop and will stop after there are no records left
             // the loop then creates an object using the data it got from the database and adds it to the items list
+           
             while (reader.Read())
             {
                 int id = reader.GetInt32(0);
@@ -71,7 +72,7 @@ namespace Inventory_management_v1
                 Items.Add(item);
                 
             }
-            reader.Close();
+            
             return Items;// returns the list
         }
 
@@ -96,7 +97,7 @@ namespace Inventory_management_v1
 
             }
 
-            reader.Close();
+            
             
             return Batches;// returns the list
         }

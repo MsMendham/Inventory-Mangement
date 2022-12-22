@@ -61,6 +61,7 @@
     <Compile Include="AdminMenu.xaml.cs">
       <DependentUpon>AdminMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AlgorithmFuncs.cs" />
     <Compile Include="Batch.cs" />
     <Compile Include="InventoryMenu.xaml.cs">
       <DependentUpon>InventoryMenu.xaml</DependentUpon>

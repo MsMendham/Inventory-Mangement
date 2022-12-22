@@ -52,24 +52,26 @@ namespace Inventory_management_v1
         private void AdminButton(object sender, RoutedEventArgs e)
         {
             AdminMenu objadminmenu = new AdminMenu();
-            objadminmenu.Show();
-            this.Hide();
+            objadminmenu.ShowDialog();
+            
             // creates a adminmenu object shows it and hides the current menu
         }
 
         private void WarehouseButton(object sender, RoutedEventArgs e)
         {
             WarehouseMenu objwarehouseMenu = new WarehouseMenu();
-            objwarehouseMenu.Show();
-            this.Hide();
+            objwarehouseMenu.ShowDialog();
+            
             // creates a warehousemenu object shows it and hides the current menu
         }
 
         private void InventButton(object sender, RoutedEventArgs e)
         {
             InventoryMenu objinventorymenu = new InventoryMenu(uname);
-            objinventorymenu.Show();
-            this.Hide();
+            objinventorymenu.ShowDialog();
+            
+            
+           
             // creates a inventorymenu object shows it and hides the current menu
         }
     }

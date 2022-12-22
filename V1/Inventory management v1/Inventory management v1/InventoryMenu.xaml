@@ -15,11 +15,13 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
@@ -34,15 +36,12 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
             <RowDefinition Height="3*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
         <TextBlock
             Grid.Row="2"
-            Grid.Column="3"
+            Grid.Column="4"
             Text="Inventory"
             FontSize="100"
             Grid.ColumnSpan="2"
@@ -58,35 +57,111 @@
             />
         <Button
             Name="Batches"
-            Grid.Column="3"
+            Grid.Column="4"
             Grid.Row="4"
             Width="500"
             Height="100"
             Content="Batches"
             FontSize="60"
-            Style="{DynamicResource FancyButton}"
+            Style="{DynamicResource FancyButton}" Click="Batchpressed"
             />
         <Button
             Name="Items"
-            Grid.Column="4"
+            Grid.Column="5"
             Grid.Row="4"
             Width="500"
             Height="100"
             Content="Items"
             FontSize="60"
-            Style="{DynamicResource FancyButton}"
+            Style="{DynamicResource FancyButton}" Click="ItemPress"
+            
             />
         <ListBox
             Grid.Row="5"
-            Grid.Column="3"
+            Grid.Column="4"
             Grid.ColumnSpan="2"
-            Name="Box"
+            Name="LBox"
             FontSize="40"
             Height="450"
+            Grid.RowSpan="5"
             
             />
         <!--welp this list box needs to be finished and funcs added before other funtionality i thiunk-->
+        <TextBlock 
+            Grid.Row="5"
+            Grid.Column="6"
+            Text="Search:"
+            FontSize="30"
+            Padding="10"
+            Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"
+            />
+        <TextBox
+            x:Name="Search"
+            Grid.Row="6"
+            Grid.Column="6"
+            Width="200"
+            Height="50"
+            Grid.ColumnSpan="3" 
+            VerticalAlignment="Top" 
+            HorizontalAlignment="Left"
+            Margin="12,0,0,0" 
+            BorderBrush="Black"
+            />
+        <Button
+            x:Name="searchbutton"
+            Grid.Column="6"
+            Grid.Row="7"
+            Content="Search"
+            Grid.ColumnSpan="3"
+            FontSize="30" 
+            VerticalAlignment="Top" 
+            HorizontalAlignment="Left" 
+            Margin="10,0,0,0"
+            Padding="10"
+            Width="180"
+            Style="{DynamicResource White Button}" Click="searchbuttonpressed"
+            
+            />
+        <TextBlock 
+            Grid.Row="8"
+            Grid.Column="6"
+            Text="Sort"
+            Grid.ColumnSpan="3"
+            FontSize="30"
+            Padding="10" VerticalAlignment="Bottom" HorizontalAlignment="Stretch"
+            />
+        <ComboBox
+            Grid.Row="9"
+            Grid.Column="6"
+            Grid.ColumnSpan="3"
+            Width="200" 
+            Height="60"
+            HorizontalAlignment="Left" 
+            Margin="12,0,0,0" 
+            VerticalAlignment="Top"
+            FontFamily="20" 
+            DataContextChanged="sortchanges"
+            x:Name="sortbox" SelectionChanged="sortboxchange"
+            >
+            <ComboBoxItem Content="Batch Number" x:Name="item1"/>
+            <ComboBoxItem Content="Item" x:Name="item2"/>
+            <ComboBoxItem Content="Expiry Date" x:Name="item3"/>
+            <ComboBoxItem Content="Quantity" x:Name="item4"/>
+        </ComboBox>
 
+        <Button 
+            x:Name="Exit"
+            Grid.Column="9"
+            Grid.Row="10"
+            Content="Back"
+            FontSize="50" 
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center" 
+            Padding="30,1,30,1" 
+            Style="{DynamicResource White Button}" 
+            Click="Back"
+            
+            />
 
     </Grid>
 </Window>

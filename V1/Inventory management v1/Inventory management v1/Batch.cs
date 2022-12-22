@@ -9,10 +9,10 @@ namespace Inventory_management_v1
     public class Batch // creates class
     {
         private int BatchNo;
-        private object Item;
+        private Item Item;
         private DateTime expiryDate;
         private int Quantity;
-        public Batch(object item, int Number, DateTime Date, int Quant) // constructor method
+        public Batch(Item item, int Number, DateTime Date, int Quant) // constructor method
         {
             BatchNo = Number;
             Item = item;
@@ -24,7 +24,7 @@ namespace Inventory_management_v1
         {
             return BatchNo;
         }
-        public object getItem()
+        public Item getItem()
         {
             return Item;
         }
@@ -38,7 +38,7 @@ namespace Inventory_management_v1
             return Quantity;
         }
 
-        public void setItem(object item)
+        public void setItem(Item item)
         {
             this.Item = item;
         }
