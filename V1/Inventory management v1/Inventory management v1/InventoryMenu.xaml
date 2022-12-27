@@ -141,7 +141,9 @@
             VerticalAlignment="Top"
             FontFamily="20" 
             DataContextChanged="sortchanges"
-            x:Name="sortbox" SelectionChanged="sortboxchange"
+            x:Name="sortbox" 
+            SelectionChanged="sortboxchange" DropDownClosed="combodropcls"
+            
             >
             <ComboBoxItem Content="Batch Number" x:Name="item1"/>
             <ComboBoxItem Content="Item" x:Name="item2"/>
