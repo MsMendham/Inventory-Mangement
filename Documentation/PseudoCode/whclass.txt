@@ -1,0 +1,30 @@
+class Warehouse
+    public procedure new(self,ID,nodes,W,H)
+        self.ID = ID
+        self.nodes = nodes
+        self.width = W
+        self.height = H
+    end procedure
+    
+    function getID(self)
+        return ID
+    
+    function getnodes(self)
+        return nodes
+    
+    function getWidth(self)
+        return Width
+        
+    function getHeight(self)
+        return Height
+    
+    procedure setnodes(self,nodes)
+        self.nodes = nodes
+    
+    procedure setnodes(self,Width)
+        self.width = width
+        
+    procedure setnodes(self,height)
+        self.height = height
+    
+end class

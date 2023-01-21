@@ -1,0 +1,12 @@
+Function getNodesDB(ID)
+    nodesslqArr = sql.getnodes(ID)
+    nodes = []
+    for i in nodesslqArr
+        x = i[1]
+        y = i[2]
+        connection = i[3]
+        contents = i[4]
+        size = i[5]
+        nodeobj = new node(x,y,connection,contents,size)
+        nodes.append(nodeobj)
+    return nodes

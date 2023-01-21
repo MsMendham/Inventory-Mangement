@@ -1,0 +1,21 @@
+procedure WarehouseMenu()
+    wh = getWarehouseDB(1)
+    nodes = getNodesDB(1)
+    wh.setNodes(nodes.getcoords())
+    RenderWindow()
+    window.graph(wh)
+    While True 
+        If window.graph.buttonpress == True
+            coords = button.coords
+            data = nodes[coords[0],coords[1]].getdata()
+            infobox.data = data
+        ElseIf window.whbutton == True
+            nuWh = whSelect.data
+            wh = getWarehouseDB(nuWh)
+            nodes = getNodesDB(nuWh)
+            wh.setNodes(nodes.getcoords())
+            window.graph(wh)
+        ElseIf Window.exitButton == True
+            MainMenu.Show()
+            self.destroy()
+            break

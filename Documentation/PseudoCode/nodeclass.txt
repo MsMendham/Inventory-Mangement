@@ -1,0 +1,39 @@
+class node
+    public procedure new(self,x,y,cons,conts,size)
+        self.x = x
+        self.y = y 
+        self.connections = cons
+        self.contents = conts
+        self.size = size
+    end procedure
+    
+    Function getX(self)
+        return x
+    
+    Function getY(self)
+        return y
+        
+    Function getcons(self)
+        return connections
+        
+    Function getconts(self)
+        return contents
+        
+    Function getsize(self)
+        return size
+        
+    procedure setX(self,x)
+        self.x = x
+    
+    procedure setY(self,y)
+        self.y = y
+   
+    procedure setcons(self,cons)
+        self.connections = cons
+    
+    procedure setconts(self,conts)
+        self.contents= conts
+    
+    procedure setsize(self,size)
+        self.size = size
+    

@@ -1,0 +1,7 @@
+Function getWarehouseDB(ID)
+        whsqlobj = sql.getWarehouse(ID)
+        nodes = []
+        width = whsqlobj[1]
+        height = whsqlobj[2]
+        WH = new warehouse(ID,nodes,width,height)
+        Return WH
