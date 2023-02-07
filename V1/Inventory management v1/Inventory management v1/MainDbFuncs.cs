@@ -12,7 +12,7 @@ namespace Inventory_management_v1
         // Function to query the Items Database and return the result
         private static SqlDataReader QueryMainDB(string query) 
         {
-            var cs = @"Server=.\SQLEXPRESS;Database=ItemsDB;Trusted_Connection=True;";
+            var cs = @"Server=.\SQLEXPRESS;Database=MainDB;Trusted_Connection=True;";
             // defines the connection string when setup this would need to be changed to fit the database
             // that is being used either manully or through a install wizard 
             var con = new SqlConnection(cs);
