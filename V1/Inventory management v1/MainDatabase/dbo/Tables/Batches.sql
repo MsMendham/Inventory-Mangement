@@ -2,7 +2,7 @@
 (
 	[BatchID] INT NOT NULL PRIMARY KEY IDENTITY, 
     [ItemID] INT NOT NULL, 
-    [ExpiryDate] DATE NULL, 
+    [ExpiryDate] DATETIME NULL, 
     [Quantity] INT NOT NULL, 
     CONSTRAINT [FK_Batches_Items] FOREIGN KEY ([ItemID]) REFERENCES [Items]([ItemId])
 )

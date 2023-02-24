@@ -10,7 +10,7 @@ namespace Inventory_management_v1
     class MainDbFuncs
     {
         // Function to query the Items Database and return the result
-        private static SqlDataReader QueryMainDB(string query) 
+        public static SqlDataReader QueryMainDB(string query) 
         {
             var cs = @"Server=.\SQLEXPRESS;Database=MainDB;Trusted_Connection=True;";
             // defines the connection string when setup this would need to be changed to fit the database
@@ -102,5 +102,12 @@ namespace Inventory_management_v1
             return Batches;// returns the list
         }
 
+        public static int getOneItem(string name)
+        {
+            SqlDataReader reader = QueryMainDB($"EXEC getItem @param1 = {name};");
+            reader.Read();
+            int id = reader.GetInt32(0);
+            return id;
+        }
     }
 }

@@ -51,9 +51,14 @@ namespace Inventory_management_v1
 
         private void AdminButton(object sender, RoutedEventArgs e)
         {
-            AdminMenu objadminmenu = new AdminMenu();
-            objadminmenu.ShowDialog();
+            AdminMenu objadminmenu = new AdminMenu(uname);
+            this.Hide();
+            if(objadminmenu.ShowDialog() == true)
+            {
+                this.Show();
+            }
             
+
             // creates a adminmenu object shows it and hides the current menu
         }
 
@@ -68,7 +73,12 @@ namespace Inventory_management_v1
         private void InventButton(object sender, RoutedEventArgs e)
         {
             InventoryMenu objinventorymenu = new InventoryMenu(uname);
-            objinventorymenu.ShowDialog();
+            this.Hide();
+            if (objinventorymenu.ShowDialog() == true)
+            {
+                this.Show();
+            }
+
             
             
            

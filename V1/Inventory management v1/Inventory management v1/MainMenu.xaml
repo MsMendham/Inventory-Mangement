@@ -63,6 +63,7 @@
             FontSize="140"
             Margin="0,10,0,10" Click="InventButton"
             />
+        <!--=
         <Button 
             Style="{DynamicResource FancyButton}"
             x:Name="Warehse"
@@ -72,6 +73,7 @@
             FontSize="140"
             Margin="0,10,0,10" Click="WarehouseButton"
             />
+        =-->
         <Button 
             Style="{DynamicResource FancyButton}" 
             x:Name="Admin"

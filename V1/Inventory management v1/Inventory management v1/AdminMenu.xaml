@@ -16,12 +16,17 @@
             <ColumnDefinition Width="20"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.5*"/>
             <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
@@ -32,5 +37,55 @@
             Text="AdminMenu"
             FontSize="100"
             />
+        <ComboBox
+            Grid.Row="3"
+            Grid.Column="2"
+            x:Name="DropDown"
+            FontSize="50"  
+            Margin="10,10,10,10" 
+            SelectedIndex="0"
+            >
+            <ComboBoxItem Content="Add Data"/>
+            <ComboBoxItem Content="Delete Data"/>
+            <ComboBoxItem Content="Edit Data"/>
+        </ComboBox>
+        <Button 
+            Grid.Column="2" 
+            Grid.Row="4"
+            Content="Users"
+            FontSize="80"
+            Style="{DynamicResource FancyButton}" Click="UserPressed"
+            
+            />
+        <Button 
+            Grid.Column="2" 
+            Grid.Row="5"
+            Content="Items"
+            FontSize="80"
+            Style="{DynamicResource FancyButton}" Click="ItemPressed"
+            
+            />
+        <Button 
+            Grid.Column="2" 
+            Grid.Row="6"
+            Content="Batches"
+            FontSize="80"
+            Style="{DynamicResource FancyButton}" Click="BatchPressed"
+            
+            />
+        <Button 
+            x:Name="Exit"
+            Grid.Column="4"
+            Grid.Row="7"
+            Content="Back"
+            FontSize="50" 
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center" 
+            Padding="70,1,70,1" 
+            Style="{DynamicResource White Button}" Click="Back" 
+            
+            />
+
     </Grid>
+
 </Window>

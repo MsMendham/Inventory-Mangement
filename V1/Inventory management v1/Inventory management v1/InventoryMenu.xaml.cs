@@ -43,6 +43,7 @@ namespace Inventory_management_v1
 
         private void Back(object sender, RoutedEventArgs e)
         {
+            this.DialogResult = true;
             this.Close(); // closes the window
         }
 

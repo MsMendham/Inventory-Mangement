@@ -58,27 +58,107 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddBatch.xaml.cs">
+      <DependentUpon>AddBatch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddItem.xaml.cs">
+      <DependentUpon>AddItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddMenu.xaml.cs">
+      <DependentUpon>AddMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="addUsers.xaml.cs">
+      <DependentUpon>addUsers.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AdminMenu.xaml.cs">
       <DependentUpon>AdminMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="AlgorithmFuncs.cs" />
     <Compile Include="Batch.cs" />
+    <Compile Include="BatchDel.xaml.cs">
+      <DependentUpon>BatchDel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DelMenu.xaml.cs">
+      <DependentUpon>DelMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditBatches.xaml.cs">
+      <DependentUpon>EditBatches.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditMenu.xaml.cs">
+      <DependentUpon>EditMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditUser.xaml.cs">
+      <DependentUpon>EditUser.xaml</DependentUpon>
+    </Compile>
     <Compile Include="InventoryMenu.xaml.cs">
       <DependentUpon>InventoryMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="Item.cs" />
+    <Compile Include="ItemDel.xaml.cs">
+      <DependentUpon>ItemDel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ItemEdit.xaml.cs">
+      <DependentUpon>ItemEdit.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainDbFuncs.cs" />
     <Compile Include="MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserDel.xaml.cs">
+      <DependentUpon>UserDel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WarehouseMenu.xaml.cs">
       <DependentUpon>WarehouseMenu.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddBatch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="addUsers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AdminMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="BatchDel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DelMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditBatches.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="InventoryMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ItemDel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ItemEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -97,6 +177,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserDel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

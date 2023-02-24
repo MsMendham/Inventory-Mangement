@@ -9,7 +9,7 @@ namespace Inventory_management_v1
 {
     class DBfuncs
     {
-        private static string queryDB(string query)
+        public static string queryDB(string query)
         {
             var cs = @"Server=.\SQLEXPRESS;Database=UserDB;Trusted_Connection=True;";
             // defines the connection string when setup this would need to be changed to fit the database
@@ -57,6 +57,8 @@ namespace Inventory_management_v1
             // this executes the getperms stored proc
             return result;
         }
+
+        
 
     }
 }

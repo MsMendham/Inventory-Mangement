@@ -31,6 +31,7 @@ namespace Inventory_management_v1
             string hashed = Hash(password);
             string databasecheck = DBfuncs.checkUserExists(username);
             string databasematch = DBfuncs.GetUser(username,hashed);
+            Console.WriteLine(hashed);
             // hashes the password the queries the database
 
             if (databasecheck == "")
