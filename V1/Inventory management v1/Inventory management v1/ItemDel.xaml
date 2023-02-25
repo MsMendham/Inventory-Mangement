@@ -33,6 +33,7 @@
                    FontSize="24"
                    Grid.ColumnSpan="3"  
                    Margin="0,10,0,10"
+                   x:Name="topText"
                    
                    />
         <TextBlock Grid.Column="2"
@@ -70,7 +71,8 @@
                 Width="auto"
                 Height="auto"
                 Content="Enter"
-                Style="{DynamicResource White Button}"
+                Style="{DynamicResource White Button}" Click="clicked"
+                
                 />
     </Grid>
 </UserControl>

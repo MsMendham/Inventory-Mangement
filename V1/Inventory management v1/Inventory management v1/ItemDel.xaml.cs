@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace Inventory_management_v1
 {
@@ -20,9 +21,29 @@ namespace Inventory_management_v1
     /// </summary>
     public partial class ItemDel : UserControl
     {
-        public ItemDel()
+        string curUser;
+        public ItemDel(string uname)
         {
             InitializeComponent();
+            curUser = uname;
+        }
+
+        private void clicked(object sender, RoutedEventArgs e)
+        {
+            string itemName = Name.Text;
+            string yourPass = YourPass.Text;
+
+            int res = Loginfuncs.Verify(curUser, yourPass);
+            var window = Window.GetWindow(this);
+            if (res == -1)
+            {
+                topText.Text = "Wrong Password";
+            }
+            else
+            {
+                MainDbFuncs.QueryMainDB($"EXEC Itemactions @Action=2, @name = '{itemName}' ");
+                window.Close();
+            }
         }
     }
 }

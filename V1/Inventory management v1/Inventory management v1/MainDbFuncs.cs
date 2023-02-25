@@ -87,7 +87,7 @@ namespace Inventory_management_v1
             while (reader.Read())
             {
                 int num = reader.GetInt32(0);
-                Item item = items[reader.GetInt32(1)-1];
+                Item item = items.Find(e => e.getID() == (reader.GetInt32(1)));
                 DateTime Date = reader.GetDateTime(2);
                 int Quant = reader.GetInt32(3);
 

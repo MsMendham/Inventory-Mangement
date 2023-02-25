@@ -15,6 +15,12 @@ else
 if @Action = 1 -- if action is edit 
 
 begin
+	if @type = 'none'
+		update dbo.Items
+		set [dbo].[Items].[Name] = @newname
+		where [dbo].[Items].[Name] = @name
+	else
+
 	update dbo.Items -- update data 
 	set [dbo].[Items].[Name] = @newname, [dbo].[Items].[Type] = @type
 	where [dbo].[Items].[Name] = @name

@@ -30,10 +30,10 @@ namespace Inventory_management_v1
                     this.ContentHolder.Content = new UserDel(uname);
                     break;
                 case 2:
-                    this.ContentHolder.Content = new ItemDel();
+                    this.ContentHolder.Content = new ItemDel(uname);
                     break;
                 case 3:
-                    this.ContentHolder.Content = new BatchDel();
+                    this.ContentHolder.Content = new BatchDel(uname);
                     break;
                 default:
                     break;

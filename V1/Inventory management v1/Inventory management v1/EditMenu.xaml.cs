@@ -30,10 +30,10 @@ namespace Inventory_management_v1
                     this.ContentHolder.Content = new EditUser(uname);
                     break;
                 case 2:
-                    this.ContentHolder.Content = new ItemEdit();
+                    this.ContentHolder.Content = new ItemEdit(uname);
                     break;
                 case 3:
-                    this.ContentHolder.Content = new EditBatches();
+                    this.ContentHolder.Content = new EditBatches(uname);
                     break;
                 default:
                     break;
