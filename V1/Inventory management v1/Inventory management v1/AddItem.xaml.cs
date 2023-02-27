@@ -43,7 +43,7 @@ namespace Inventory_management_v1
             }
             else
             {
-                MainDbFuncs.QueryMainDB($"EXEC Itemactions @Action=0, @name={name}, @type={type}"); ;
+                MainDbFuncs.QueryMainDB($"EXEC Itemactions @Action=0, @name='{name}', @type={type}"); ;
                 window.Close();
             }
         }

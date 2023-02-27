@@ -104,7 +104,7 @@ namespace Inventory_management_v1
 
         public static int getOneItem(string name)
         {
-            SqlDataReader reader = QueryMainDB($"EXEC getItem @param1 = {name};");
+            SqlDataReader reader = QueryMainDB($"EXEC getItem @param1 = '{name}';");
             reader.Read();
             int id = reader.GetInt32(0);
             return id;
