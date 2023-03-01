@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,6 +24,8 @@ namespace Inventory_management_v1
         public LoginMenu()
         {
             InitializeComponent();
+            string frameworkDescription = RuntimeInformation.FrameworkDescription;
+            Console.WriteLine(frameworkDescription);
         }
 
         private void LoginButton(object sender, RoutedEventArgs e)
